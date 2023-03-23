@@ -151,7 +151,8 @@
             <div class="container">
                 <div class="footer__wrapper">
                     <div class="footer__left">
-                        <img src="assets/img/footer-bg..svg" alt="" class="footer__decor">
+                        <!-- <img src="./assets/img/footer-bg.svg" alt="" class="footer__decor"> -->
+                        <img src="assets/img/footer-bg-full..svg" alt="" class="footer__decor">
                         <div class="footer__left-wrap">
                             <h2 class="footer__header page-h2">Наши контакты</h2>
                             <div class="footer__desc">
@@ -175,14 +176,17 @@
                                 <label class="footer__label">
                                     <span>Ваши данные <span class="blue">*</span></span>
                                     <input data-required type="text" name="name" placeholder="ФИО" class="footer__field page-field">
+                                    <div class="footer__field-clear" data-field-clear><img src="assets/img/input-clear..svg" alt=""></div>
                                 </label>
                                 <label class="footer__label">
                                     <span>Организация <span class="blue">*</span></span>
                                     <input data-required type="text" name="company" placeholder="Наименование организации" class="footer__field page-field">
+                                    <div class="footer__field-clear" data-field-clear><img src="assets/img/input-clear..svg" alt=""></div>
                                 </label>
                                 <label class="footer__label --short">
-                                    <span>Телефон<span class="blue">*</span></span>
+                                    <span>Телефон <span class="blue">*</span></span>
                                     <input data-required type="text" name="phone" placeholder="Телефон для связи" class="footer__field page-field">
+                                    <div class="footer__field-clear" data-field-clear><img src="assets/img/input-clear..svg" alt=""></div>
                                 </label>
                                 <label class="footer__label --short">
                                     <span>Почта</span>
@@ -203,6 +207,20 @@
 
                                 <button class="footer__submit page-btn">Отправить запрос</button>
                             </form>
+                        </div>
+                        <div class="form__result" data-success>
+                            <div class="form__result-wrapper">
+                                <div class="form__result-icon"><img src="assets/img/success..svg" alt=""></div>
+                                <span class="form__result-header">Спасибо за обращение!</span>
+                                <p class="form__result-text page-text">Ваша заявка отправлена. После ее обработки свяжемся с вами в течение 12 рабочих часов.</p>
+                            </div>
+                        </div>
+                        <div class="form__result" data-error>
+                            <div class="form__result-wrapper">
+                                <div class="form__result-icon"><img src="assets/img/error..svg" alt=""></div>
+                                <span class="form__result-header">Ошибка при отправке</span>
+                                <p class="form__result-text page-text">Пожалуйста, обновите страницу и заполните форму или свяжитесь с нами по номеру <a href="">8-800-333-98-70</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
