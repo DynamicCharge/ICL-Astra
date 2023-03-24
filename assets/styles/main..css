@@ -1479,6 +1479,9 @@ body, html {
   .footer .footer__wrapper {
     position: static;
     grid-template-columns: 1fr; }
+  .footer .footer__submit {
+    max-width: 100%;
+    width: 100%; }
   .footer .footer__left {
     padding: 0; }
   .footer .footer__left {
