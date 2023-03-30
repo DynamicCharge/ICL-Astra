@@ -852,12 +852,16 @@ body, html {
 
 .header {
   padding-top: 23px;
+  padding-bottom: 10px;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; }
+  z-index: 10;
+  transition: .3s; }
+  .header._fixed {
+    background: #fff; }
   .header .header__wrapper {
     display: flex;
     justify-content: start;
@@ -1397,6 +1401,60 @@ body, html {
   .page-table__item:not(:last-child) {
     border-right: 1px solid #000; }
 
+.cookies {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  max-width: 1110px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 32px rgba(10, 3, 89, 0.1);
+  border-radius: 4px; }
+
+.cookies__wrapper {
+  padding: 30px 50px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.cookies__close {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  z-index: 10; }
+  .cookies__close::before, .cookies__close::after {
+    content: '';
+    width: 2px;
+    height: 100%;
+    border-radius: 1px;
+    display: block;
+    background: #4d4d4d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); }
+  .cookies__close::after {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+
+.cookies__wrap {
+  display: flex;
+  justify-content: start;
+  align-items: center; }
+
+.cookies__link {
+  text-decoration: none;
+  color: #0092EA; }
+
+.cookies__accept {
+  margin-left: 30px; }
+
 @media screen and (max-width: 1085px) {
   .footer .footer__label.--short {
     width: 100%; } }
@@ -1406,7 +1464,20 @@ body, html {
     padding-left: 39px;
     padding-right: 39px; }
   .title .title__header {
-    max-width: 570px; } }
+    max-width: 570px; }
+  .cookies__wrapper {
+    padding: 30px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start; }
+  .cookies__text {
+    margin-bottom: 20px; }
+  .cookies {
+    transform: none;
+    left: 39px;
+    max-width: 430px; }
+  .cookies__accept {
+    margin-left: 25px; } }
 
 @media screen and (max-width: 769px) {
   .logo {
@@ -1504,6 +1575,12 @@ body, html {
     margin: 20px 0 30px; } }
 
 @media screen and (max-width: 675px) {
+  .cookies {
+    transform: translateX(-50%);
+    max-width: 345px;
+    left: 50%; }
+  .cookies__accept {
+    flex-shrink: 0; }
   .logo {
     max-width: 104px; }
   .footer .footer__decor {
